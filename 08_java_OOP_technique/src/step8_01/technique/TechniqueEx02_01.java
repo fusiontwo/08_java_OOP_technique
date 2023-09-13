@@ -37,6 +37,55 @@ class ModifierTest {
 	
 }
 
+// B0 : Business Object       : 비즈니스 모델 객체
+// VO : Value Object          : 값(데이터) 객체
+// DTO : Data Transfer Object : 데이터 전송 객체
+class ProductDTO {
+	
+	private String productCd;
+	private String productNm;
+	private int price;
+	private String brandCd;
+	private String brandNm;
+	
+	// getter & setter 생성 단축키
+	// 좌측 상단 Source > Generate Getters and Getters > selectAll > Generate
+	
+	public String getProductCd() {
+		return productCd;
+	}
+	public void setProductCd(String productCd) {
+		this.productCd = productCd;
+	}
+	public String getProductNm() {
+		return productNm;
+	}
+	public void setProductNm(String productNm) {
+		this.productNm = productNm;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getBrandCd() {
+		return brandCd;
+	}
+	public void setBrandCd(String brandCd) {
+		this.brandCd = brandCd;
+	}
+	public String getBrandNm() {
+		return brandNm;
+	}
+	public void setBrandNm(String brandNm) {
+		this.brandNm = brandNm;
+	}
+	
+	
+}
+
+
 public class TechniqueEx02_01 {
 
 	public static void main(String[] args) {
@@ -53,7 +102,23 @@ public class TechniqueEx02_01 {
 		
 		object.b = 2000;
 		System.out.println(object.b);
-
+		
+		System.out.println();
+		
+		ProductDTO productDTO = new ProductDTO();
+//		productDTO.productCd = "0x001";
+//		productDTO.productNm = "기계식 키보드";
+//		productDTO.price = 45000;
+		
+		productDTO.setProductCd("0x001");
+		productDTO.setProductNm("기계식키보드");
+		productDTO.setPrice(45000);
+		productDTO.setBrandCd("b1");
+		productDTO.setBrandNm("로지텍");
+		
+		System.out.println(productDTO.getProductCd());
+		System.out.println(productDTO.getBrandNm());
+		System.out.println(productDTO.getPrice());
 	}
 
 }
