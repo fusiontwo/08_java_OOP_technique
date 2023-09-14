@@ -43,6 +43,12 @@ class GoodsVO {
 		this.goodsNm = goodsNm;
 		this.goodsPrice = goodsPrice;
 	}
+
+	GoodsVO(String goodsNm , int goodsPrice) {
+		this.goodsCd = goodsCd;
+		this.goodsNm = goodsNm;
+		this.goodsPrice = goodsPrice;
+	}
 	
 	void printData() {
 		System.out.println(this.goodsCd + " / " + this.goodsNm + " / " + this.goodsPrice);
@@ -65,6 +71,9 @@ public class TechniqueEx04_03 {
 		
 		GoodsVO goods4 = new GoodsVO("0x003", "무소음마우스", 27000);
 		goods4.printData();
+
+		GoodsVO goods5 = new GoodsVO("무소음마우스", 27000);
+		goods5.printData();
 		
 	}
 
