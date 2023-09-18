@@ -1,5 +1,7 @@
 package step8_01.technique;
 
+// 230919 클래스의 상속 연습
+
 class Car {
 	
 	int cost = 1000;  // 비용
